@@ -6,7 +6,7 @@ AC_INIT([XCB Proto],
         1.13,
         [xcb@lists.freedesktop.org])
 AC_CONFIG_SRCDIR([xcb-proto.pc.in])
-AM_INIT_AUTOMAKE([foreign dist-bzip2])
+AM_INIT_AUTOMAKE([foreign dist-xz])
 
 AC_PATH_PROG(XMLLINT, xmllint, no)
 AM_CONDITIONAL(HAVE_XMLLINT, test "x$XMLLINT" != "xno")
