@@ -3,6 +3,7 @@ This module contains the classes which represent XCB data types.
 '''
 from xcbgen.expr import Field, Expression
 from xcbgen.align import Alignment, AlignmentLog
+from xml.etree.ElementTree import SubElement
 import __main__
 
 verbose_align_log = False
@@ -1351,6 +1352,15 @@ class Error(ComplexType):
         self.opcodes = {}
         if self.required_start_align is None:
             self.required_start_align = Alignment(4,0)
+
+        # All errors are basically the same, but they still got different XML
+        # for historic reasons. This 'invents' the missing parts.
+        if len(self.elt) < 1:
+            SubElement(self.elt, "field", type="CARD32", name="bad_value")
+        if len(self.elt) < 2:
+            SubElement(self.elt, "field", type="CARD16", name="minor_opcode")
+        if len(self.elt) < 3:
+            SubElement(self.elt, "field", type="CARD8", name="major_opcode")
 
     def add_opcode(self, opcode, name, main):
         self.opcodes[name] = opcode
