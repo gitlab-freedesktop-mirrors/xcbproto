@@ -1689,6 +1689,12 @@ authorization from the authors.
     </struct>
 
     <struct name="DeviceClass">
+        <length>
+            <op op="*">
+                <fieldref>len</fieldref>
+                <value>4</value>
+            </op>
+        </length>
         <field type="CARD16"   name="type" enum="DeviceClassType" />
         <field type="CARD16"   name="len" />
         <field type="DeviceId" name="sourceid" />
