@@ -503,6 +503,8 @@ class ComplexType(Type):
 
     Public fields added:
     fields is an array of Field objects describing the structure fields.
+    length_expr is an expression that defines the length of the structure.
+
     '''
     def __init__(self, name, elt):
         Type.__init__(self, name)
@@ -512,6 +514,7 @@ class ComplexType(Type):
         self.nmemb = 1
         self.size = 0
         self.lenfield_parent = [self]
+        self.length_expr = None
 
         # get required_start_alignment
         required_start_align_element = elt.find("required_start_align")
@@ -572,6 +575,9 @@ class ComplexType(Type):
                 fd_name = child.get('name')
                 type = module.get_type('INT32')
                 type.make_fd_of(module, self, fd_name)
+                continue
+            elif child.tag == 'length':
+                self.length_expr = Expression(list(child)[0], self)
                 continue
             else:
                 # Hit this on Reply
