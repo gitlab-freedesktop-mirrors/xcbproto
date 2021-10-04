@@ -1,10 +1,11 @@
 '''
 This module contains the classes which represent XCB data types.
 '''
+import sys
 from xcbgen.expr import Field, Expression
 from xcbgen.align import Alignment, AlignmentLog
 
-if version_info[:2] >= (3, 3):
+if sys.version_info[:2] >= (3, 3):
     from xml.etree.ElementTree import SubElement
 else:
     from xml.etree.cElementTree import SubElement
