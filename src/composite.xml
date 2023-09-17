@@ -112,7 +112,7 @@ other requests using Composite.  Failure to do so will cause a BadRequest error.
     <field type="CARD8" name="update" enum="Redirect" />
     <pad bytes="3" />
     <doc>
-      <brief>Redirect the heirarchy starting at “window” to off-screen storage.</brief>
+      <brief>Redirect the heirarchy starting at "window" to off-screen storage.</brief>
       <description>
 	The hierarchy starting at 'window' is directed to off-screen
 	storage.  When all clients enabling redirection terminate,
