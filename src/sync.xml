@@ -8,6 +8,10 @@ for licensing information.
     major-version="3" minor-version="1">
   <import>xproto</import>
 
+  <error name="BadCounter" number="0" />
+  <error name="BadAlarm" number="1" />
+  <error name="BadFence" number="2" />
+
   <xidtype name="ALARM" />
 
   <enum name="ALARMSTATE">
