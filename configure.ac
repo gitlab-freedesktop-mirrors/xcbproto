@@ -14,7 +14,7 @@ if test "$XMLLINT" = "no"; then
    AC_MSG_WARN([xmllint not found; unable to validate against schema.])
 fi
 
-AM_PATH_PYTHON([2.5])
+AM_PATH_PYTHON([3.0])
 
 xcbincludedir='${datadir}/xcb'
 AC_SUBST(xcbincludedir)
