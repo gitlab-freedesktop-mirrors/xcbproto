@@ -8,10 +8,6 @@ for licensing information.
     major-version="3" minor-version="1">
   <import>xproto</import>
 
-  <error name="BadCounter" number="0" />
-  <error name="BadAlarm" number="1" />
-  <error name="BadFence" number="2" />
-
   <xidtype name="ALARM" />
 
   <enum name="ALARMSTATE">
@@ -80,6 +76,12 @@ for licensing information.
 
   <error name="Alarm" number="1">
     <field type="CARD32" name="bad_alarm" />
+    <field type="CARD16" name="minor_opcode" />
+    <field type="CARD8" name="major_opcode" />
+  </error>
+
+  <error name="Fence" number="2">
+    <field type="CARD32" name="bad_fence" />
     <field type="CARD16" name="minor_opcode" />
     <field type="CARD8" name="major_opcode" />
   </error>
