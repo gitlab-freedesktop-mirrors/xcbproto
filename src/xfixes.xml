@@ -217,7 +217,7 @@ authorization from the authors.
     <field type="INT16"  name="dy" />
   </request>
 
-  <request name="RegionExtents" opcode="18"> 	
+  <request name="RegionExtents" opcode="18">
     <field type="REGION" name="source" />
     <field type="REGION" name="destination" />
   </request>
@@ -322,7 +322,7 @@ authorization from the authors.
     <field type="CARD16" name="top" />
     <field type="CARD16" name="bottom" />
   </request>
-  
+
   <!-- Version 4 -->
   <request name="HideCursor" opcode="29">
     <field type="WINDOW" name="window" />

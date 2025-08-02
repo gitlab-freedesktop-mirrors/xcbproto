@@ -125,7 +125,7 @@ OF THIS SOFTWARE.
   </request>
 
   <xidtype name="EVENT"/>
-  
+
   <request name="SelectInput" opcode="3">
     <field type="EVENT" name="eid"/>
     <field type="WINDOW" name="window" />
@@ -172,7 +172,7 @@ OF THIS SOFTWARE.
     <pad bytes="2" />
     <field type="EVENT" name="event" />
   </event>
-    
+
   <event name="ConfigureNotify" number="0" xge="true">
     <pad bytes="2" />
     <field type="EVENT" name="event" />

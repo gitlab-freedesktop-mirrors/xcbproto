@@ -32,7 +32,7 @@ authorization from the authors.
     <!-- Conforms to XPRINT 1.0 -->
 
     <import>xproto</import>
-    
+
     <typedef oldname="char" newname="STRING8" />
 
     <!-- Types -->
@@ -85,8 +85,8 @@ authorization from the authors.
         <item name="MediumAttr"><value>6</value></item>
         <item name="SpoolerAttr"><value>7</value></item>
     </enum>
-    
-    
+
+
     <!-- Requests -->
     <request name="PrintQueryVersion" opcode="0">
         <reply>

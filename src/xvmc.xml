@@ -44,14 +44,14 @@ authorization from the authors.
         <field type="CARD32" name="mc_type" />
         <field type="CARD32" name="flags" />
     </struct>
-    
-    <request name="QueryVersion" opcode="0"> 
+
+    <request name="QueryVersion" opcode="0">
         <reply>
             <pad bytes="1" />
             <field type="CARD32" name="major" />
             <field type="CARD32" name="minor" />
         </reply>
-    </request> 
+    </request>
 
     <request name="ListSurfaceTypes" opcode="1">
         <field type="PORT" name="port_id" />
@@ -87,7 +87,7 @@ authorization from the authors.
     <request name="DestroyContext" opcode="3">
         <field type="CONTEXT" name="context_id" />
     </request>
-    
+
     <request name="CreateSurface" opcode="4">
         <field type="SURFACE" name="surface_id" />
         <field type="CONTEXT" name="context_id" />
@@ -140,7 +140,7 @@ authorization from the authors.
             <list type="ImageFormatInfo" name="types">
                 <fieldref>num</fieldref>
             </list>
-        </reply>    
+        </reply>
     </request>
 
-</xcb> 
+</xcb>

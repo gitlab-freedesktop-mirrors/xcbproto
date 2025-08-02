@@ -1664,7 +1664,7 @@ authorization from the authors.
 				<bitcase>
 					<enumref ref="NameDetail">KTLevelNames</enumref>
 					<list name="nLevelsPerType" type="CARD8">
-					  <!-- Xlib uses NTypes here - 
+					  <!-- Xlib uses NTypes here -
 					       the spec says nKTLevels is correct, but
 					       it does not work in reality
 					       <fieldref>nKTLevels</fieldref> -->

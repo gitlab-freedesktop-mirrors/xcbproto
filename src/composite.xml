@@ -202,9 +202,9 @@ other requests using Composite.  Failure to do so will cause a BadRequest error.
     <field type="WINDOW" name="window" />
     <field type="PIXMAP" name="pixmap" />
   </request>
-  
+
   <!-- new in version 0.3 -->
-  
+
   <request name="GetOverlayWindow" opcode="7">
     <field type="WINDOW" name="window" />
     <reply>

@@ -85,7 +85,7 @@ for licensing information.
     <field type="CARD16" name="minor_opcode" />
     <field type="CARD8" name="major_opcode" />
   </error>
-    
+
   <request name="Initialize" opcode="0">
     <field type="CARD8" name="desired_major_version" />
     <field type="CARD8" name="desired_minor_version" />
@@ -223,7 +223,7 @@ for licensing information.
     <field type="CARD32" name="id" />
     <field type="INT32" name="priority" />
   </request>
-    
+
   <request name="GetPriority" opcode="13">
     <field type="CARD32" name="id" />
     <reply>

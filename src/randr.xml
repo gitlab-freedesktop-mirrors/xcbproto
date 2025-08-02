@@ -38,7 +38,7 @@ authorization from the authors.
 	<xidtype name="OUTPUT" />
 	<xidtype name="PROVIDER" />
 	<xidtype name="LEASE" />
-	
+
 	<!-- Errors -->
 
 	<error name="BadOutput"   number="0" />
@@ -63,14 +63,14 @@ authorization from the authors.
 		<field type="CARD16" name="mwidth" />  <!-- millimeters -->
 		<field type="CARD16" name="mheight" />
 	</struct>
-	
+
 	<struct name="RefreshRates">
 		<field type="CARD16" name="nRates" />
 		<list type="CARD16" name="rates">
 			<fieldref>nRates</fieldref>
 		</list>
 	</struct>
-	
+
 	<request name="QueryVersion" opcode="0">
 		<field type="CARD32" name="major_version" />
 		<field type="CARD32" name="minor_version" />
@@ -81,7 +81,7 @@ authorization from the authors.
 			<pad bytes="16" />
 		</reply>
 	</request>
-	
+
 	<!-- Skip obsolete opcode 1 so old clients fail immediately -->
 
 	<enum name="SetConfig">
@@ -112,7 +112,7 @@ authorization from the authors.
 			<pad bytes="10" />
 		</reply>
 	</request>
-	
+
 	<!-- opcode 3 is obsolete -->
 
 	<enum name="NotifyMask" >
@@ -128,7 +128,7 @@ authorization from the authors.
 		<item name="Lease">           <bit>7</bit></item>
 	</enum>
 
-	<request name="SelectInput" opcode="4">	
+	<request name="SelectInput" opcode="4">
 		<field type="WINDOW" name="window" />
 		<field type="CARD16" name="enable" mask="NotifyMask" />
 		<pad bytes="2" />

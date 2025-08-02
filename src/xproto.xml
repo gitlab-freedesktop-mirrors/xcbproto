@@ -27,36 +27,36 @@ authorization from the authors.
 -->
 <xcb header="xproto">
   <!-- Core protocol types -->
-  
+
   <struct name="CHAR2B">
     <field type="CARD8" name="byte1" />
     <field type="CARD8" name="byte2" />
   </struct>
-  
+
   <xidtype name="WINDOW" />
-  
+
   <xidtype name="PIXMAP" />
-  
+
   <xidtype name="CURSOR" />
-  
+
   <xidtype name="FONT" />
-  
+
   <xidtype name="GCONTEXT" />
-  
+
   <xidtype name="COLORMAP" />
-  
+
   <xidtype name="ATOM" />
-  
+
   <xidunion name="DRAWABLE">
     <type>WINDOW</type>
     <type>PIXMAP</type>
   </xidunion>
-  
+
   <xidunion name="FONTABLE">
     <type>FONT</type>
     <type>GCONTEXT</type>
   </xidunion>
-  
+
   <typedef oldname="CARD32" newname="BOOL32" />
   <typedef oldname="CARD32" newname="VISUALID" />
 
@@ -65,7 +65,7 @@ authorization from the authors.
   <typedef oldname="CARD32" newname="KEYSYM" />
 
   <typedef oldname="CARD8" newname="KEYCODE" />
- 
+
   <typedef oldname="CARD32" newname="KEYCODE32" />
 
   <typedef oldname="CARD8" newname="BUTTON" />
@@ -267,7 +267,7 @@ authorization from the authors.
   </struct>
 
   <!-- Core event types -->
-  
+
   <enum name="ModMask">
     <item name="Shift">  <bit>0</bit></item>
     <item name="Lock">   <bit>1</bit></item>
@@ -1267,7 +1267,7 @@ parent's cursor will cause an immediate change in the displayed cursor.
       ]]></field>
     </doc>
   </enum>
-  
+
   <enum name="BackPixmap">
     <item name="None">          <value>0</value></item>
     <item name="ParentRelative"><value>1</value></item>
@@ -1545,7 +1545,7 @@ The specified `window` does not exist.
       ]]></error>
     </doc>
   </request>
-  
+
   <enum name="MapState">
     <item name="Unmapped">  <value>0</value></item>
     <item name="Unviewable"><value>1</value></item>
@@ -1651,7 +1651,7 @@ The specified window does not exist.
     <pad bytes="1" />
     <field type="WINDOW" name="window" />
   </request>
-  
+
   <enum name="SetMode">
     <item name="Insert"><value>0</value></item>
     <item name="Delete"><value>1</value></item>
@@ -1797,7 +1797,7 @@ The specified window does not exist.
     <pad bytes="1" />
     <field type="WINDOW" name="window" />
   </request>
-  
+
   <enum name="ConfigWindow">
     <item name="X">          <bit>0</bit></item>
     <item name="Y">          <bit>1</bit></item>
@@ -1807,7 +1807,7 @@ The specified window does not exist.
     <item name="Sibling">    <bit>5</bit></item>
     <item name="StackMode">  <bit>6</bit></item>
   </enum>
-  
+
   <enum name="StackMode">
     <item name="Above">   <value>0</value></item>
     <item name="Below">   <value>1</value></item>
@@ -1852,7 +1852,7 @@ The specified window does not exist.
           <field type="CARD32" name="stack_mode" enum="StackMode"/>
         </bitcase>
     </switch>
-   
+
     <doc>
       <brief>Configures window attributes</brief>
       <description><![CDATA[
@@ -2141,7 +2141,7 @@ A value other than 0 or 1 was specified for `only_if_exists`.
       </list>
     </reply>
   </request>
-  
+
   <enum name="PropMode">
     <item name="Replace"><value>0</value></item>
     <item name="Prepend"><value>1</value></item>
@@ -2252,7 +2252,7 @@ The X server could not store the property (no memory?).
     <field type="WINDOW" name="window" />
     <field type="ATOM" name="property" />
   </request>
-  
+
   <enum name="GetPropertyType">
     <item name="Any"><value>0</value></item>
   </enum>
@@ -3799,7 +3799,7 @@ The specified pixmap does not exist.
       ]]></error>
     </doc>
   </request>
-  
+
   <enum name="GC">
     <item name="Function">          <bit>0</bit></item>
     <item name="PlaneMask">         <bit>1</bit></item>
@@ -4451,7 +4451,7 @@ The specified graphics context does not exist.
     <field type="CARD16" name="height" />
     <field type="CARD32" name="bit_plane" />
   </request>
-  
+
   <enum name="CoordMode">
     <item name="Origin">  <value>0</value></item>
     <item name="Previous"><value>1</value></item>
@@ -4665,7 +4665,7 @@ TODO: reasons?
     <field type="GCONTEXT" name="gc" />
     <list type="ARC" name="arcs" />
   </request>
-  
+
   <enum name="ImageFormat">
     <item name="XYBitmap"><value>0</value></item>
     <item name="XYPixmap"><value>1</value></item>
@@ -5010,7 +5010,7 @@ The specified colormap `cmap` does not exist.
     <field type="BYTE" name="flags" mask="ColorFlag" />
     <pad bytes="1" />
   </struct>
-  
+
   <request name="StoreColors" opcode="89" combine-adjacent="true">
     <pad bytes="1" />
     <field type="COLORMAP" name="cmap" />
@@ -5196,7 +5196,7 @@ The specified cursor does not exist.
   <enum name="QueryShapeOf">
     <item name="LargestCursor"> <value>0</value></item>
     <item name="FastestTile">   <value>1</value></item>
-    <item name="FastestStipple"><value>2</value></item>    
+    <item name="FastestStipple"><value>2</value></item>
   </enum>
 
   <request name="QueryBestSize" opcode="97">
@@ -5569,7 +5569,7 @@ The specified `resource` does not exist.
       </list>
     </reply>
   </request>
-  
+
   <enum name="MapIndex">
     <item name="Shift">  <value>0</value></item>
     <item name="Lock">   <value>1</value></item>

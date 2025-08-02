@@ -36,7 +36,7 @@ for licensing information.
     <item name="Xor">                 <value>11</value> </item>
     <item name="Add">                 <value>12</value> </item>
     <item name="Saturate">            <value>13</value> </item>
-    
+
     <item name="DisjointClear">       <value>16</value></item>
     <item name="DisjointSrc">         <value>17</value> </item>
     <item name="DisjointDst">         <value>18</value> </item>
@@ -49,7 +49,7 @@ for licensing information.
     <item name="DisjointAtop">        <value>25</value> </item>
     <item name="DisjointAtopReverse"> <value>26</value> </item>
     <item name="DisjointXor">         <value>27</value> </item>
-    
+
     <item name="ConjointClear">       <value>32</value></item>
     <item name="ConjointSrc">         <value>33</value> </item>
     <item name="ConjointDst">         <value>34</value> </item>
@@ -624,7 +624,7 @@ for licensing information.
   </request>
 
   <!-- new in version 0.9 -->
- 
+
   <struct name="SPANFIX">
     <field type="FIXED" name="l" />
     <field type="FIXED" name="r" />
@@ -642,7 +642,7 @@ for licensing information.
     <field type="INT16" name="y_off" />
     <list type="TRAP" name="traps" />
   </request>
-  
+
   <!-- new in version 0.10 -->
 
   <request name="CreateSolidFill" opcode="33">

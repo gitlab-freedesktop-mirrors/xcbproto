@@ -165,7 +165,7 @@ Draft Standard Version 1.1
   <request name="UnsetAttributes" opcode="4">
     <field type="DRAWABLE" name="drawable"/>
   </request>
-  
+
   <!-- version 1.1 -->
   <request name="Suspend" opcode="5">
     <field type="CARD32" name="suspend" />

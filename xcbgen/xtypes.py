@@ -503,7 +503,7 @@ class PadType(Type):
             log.ok(start_align, "", self, callstack, after_align)
 
         return after_align
-    
+
 class ComplexType(Type):
     '''
     Derived class which represents a structure.  Base type for all structure types.
@@ -765,7 +765,7 @@ class ComplexType(Type):
 
 class SwitchType(ComplexType):
     '''
-    Derived class which represents a List of Items.  
+    Derived class which represents a List of Items.
 
     Public fields added:
     bitcases is an array of Bitcase objects describing the list items
@@ -776,7 +776,7 @@ class SwitchType(ComplexType):
         self.parents = parents
         # FIXME: switch cannot store lenfields, so it should just delegate the parents
         self.lenfield_parent = list(parents) + [self]
-        # self.fields contains all possible fields collected from the Bitcase objects, 
+        # self.fields contains all possible fields collected from the Bitcase objects,
         # whereas self.items contains the Bitcase objects themselves
         self.bitcases = []
 
@@ -799,7 +799,7 @@ class SwitchType(ComplexType):
                 else:
                     field_type = self.name + (field_name,)
 
-                # use self.parent to indicate anchestor, 
+                # use self.parent to indicate anchestor,
                 # as switch does not contain named fields itself
                 if child.tag == 'bitcase':
                     type = BitcaseType(index, field_type, child, *parents)
@@ -810,7 +810,7 @@ class SwitchType(ComplexType):
                 if field_name is None:
                     type.has_name = False
                     # Get the full type name for the field
-                    field_type = type.name               
+                    field_type = type.name
                 visible = True
 
                 # add the field to ourself
@@ -861,7 +861,7 @@ class SwitchType(ComplexType):
     def calc_size(self):
         pass
 
-    # note: switch is _always_ of variable size, but we indicate here wether 
+    # note: switch is _always_ of variable size, but we indicate here wether
     # it contains elements that are variable-sized themselves
     def fixed_size(self):
         return False
@@ -1159,7 +1159,7 @@ class Reply(ComplexType):
         self.fields.append(Field(tcard16, tcard16.name, 'sequence', False, True, True))
         self.fields.append(Field(tcard32, tcard32.name, 'length', False, True, True))
         ComplexType.resolve(self, module)
-        
+
 
 class Request(ComplexType):
     '''

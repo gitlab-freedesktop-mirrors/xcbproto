@@ -197,7 +197,7 @@ authorization from the authors.
       <xsd:element name="bit" type="bitType" />
     </xsd:choice>
   </xsd:group>
-  
+
   <!-- Fields in requests that are calculated from other information, not
        supplied by the caller. -->
   <xsd:element name="exprfield" >

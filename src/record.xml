@@ -31,7 +31,7 @@ authorization from the authors.
 
     <!-- Types -->
     <xidtype name="CONTEXT" />
-    
+
     <struct name="Range8">
 	<field type="CARD8" name="first" />
 	<field type="CARD8" name="last" />
@@ -85,7 +85,7 @@ authorization from the authors.
     <error name="BadContext" number="0">
 	<field type="CARD32" name="invalid_record" />
     </error>
-	
+
     <!-- Requests -->
     <request name="QueryVersion" opcode="0">
 	<field type="CARD16" name="major_version" />
@@ -166,7 +166,7 @@ authorization from the authors.
 	    </list>
 	</reply>
     </request>
-	    
+
     <request name="DisableContext" opcode="6">
 	<field type="record:CONTEXT" name="context" />
     </request>
@@ -174,5 +174,5 @@ authorization from the authors.
     <request name="FreeContext" opcode="7">
 	<field type="record:CONTEXT" name="context" />
     </request>
-    
+
 </xcb>

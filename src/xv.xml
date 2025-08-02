@@ -57,7 +57,7 @@ authorization from the authors.
         <item name="Gettable"><bit>0</bit></item>
         <item name="Settable"><bit>1</bit></item>
     </enum>
-    
+
     <enum name="VideoNotifyReason">
 	<item name="Started">   <value>0</value> </item>
 	<item name="Stopped">   <value>1</value> </item>
@@ -138,7 +138,7 @@ authorization from the authors.
         </list>
         <!-- Some XPointer "obdata" for SHM use-->
     </struct>
-    
+
     <struct name="AttributeInfo">
         <field type="CARD32" name="flags" mask="AttributeFlag" />
         <field type="INT32" name="min" />
@@ -205,8 +205,8 @@ authorization from the authors.
         <field type="ATOM" name="attribute" />
         <field type="INT32" name="value" />
     </event>
-    
-    
+
+
     <!-- Requests -->
     <request name="QueryExtension" opcode="0">
         <reply>

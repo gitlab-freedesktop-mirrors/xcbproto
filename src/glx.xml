@@ -66,7 +66,7 @@ The patch that fixed this server bug in X.org is here:
 	<typedef oldname="double" newname="FLOAT64" />
         <typedef oldname="CARD32" newname="BOOL32" />
         <typedef oldname="CARD32" newname="CONTEXT_TAG" />
-	    
+
 	<!-- Errors -->
 	<error name="Generic" number="-1"> <!-- FIXME: fake number -->
 		<field type="CARD32" name="bad_value" />
@@ -257,7 +257,7 @@ The patch that fixed this server bug in X.org is here:
 		<field type="glx:PIXMAP" name="glx_pixmap" />
 	</request>
 
-        
+
 	<request name="GetVisualConfigs" opcode="14">
 		<field type="CARD32" name="screen" />
 		<reply>
@@ -363,7 +363,7 @@ The patch that fixed this server bug in X.org is here:
 		<field type="FBCONFIG" name="fbconfig" />
 		<field type="xproto:PIXMAP" name="pixmap" />
 		<field type="glx:PIXMAP" name="glx_pixmap" />
-		<field type="CARD32" name="num_attribs" />  
+		<field type="CARD32" name="num_attribs" />
 		<list type="CARD32" name="attribs">
 			<op op="*">
 				<fieldref>num_attribs</fieldref>
@@ -641,7 +641,7 @@ The patch that fixed this server bug in X.org is here:
 			</list>
 		</reply>
 	</request>
-		
+
 	<!-- FIXME:
 	All the Get* functions can return different stuff for replies.
 	Hopefully xcb will support multiple reply structures at some point
@@ -1024,7 +1024,7 @@ The patch that fixed this server bug in X.org is here:
 			</list>
 		</reply>
 	</request>
-	    
+
 
 	<request name="GetTexParameterfv" opcode="136">
 		<field type="CONTEXT_TAG" name="context_tag" />
@@ -1181,7 +1181,7 @@ The patch that fixed this server bug in X.org is here:
 			</list>
 		</reply>
 	</request>
-	
+
 	<request name="GetColorTableParameterfv" opcode="148">
 		<field type="CONTEXT_TAG" name="context_tag" />
 		<field type="CARD32" name="target" />
@@ -1396,7 +1396,7 @@ The patch that fixed this server bug in X.org is here:
 
 	<!--
 	GLX Extensions
-	
+
 	* XXX: So far only define non-rendering commands.
 	* Only those extensions that affect the GLX wire protocol are listed.
 	-->
@@ -1423,7 +1423,7 @@ The patch that fixed this server bug in X.org is here:
 		</reply>
 	</request>
 
-	
+
 	<!--
 	GL_ARB_occlusion_query
 	http://oss.sgi.com/projects/ogl-sample/registry/ARB/occlusion_query.txt
@@ -1448,7 +1448,7 @@ The patch that fixed this server bug in X.org is here:
 			</list>
 		</reply>
 	</request>
-	
+
 	<request name="IsQueryARB" opcode="163">
 		<field type="CONTEXT_TAG" name="context_tag" />
 		<field type="CARD32" name="id" />
@@ -1457,7 +1457,7 @@ The patch that fixed this server bug in X.org is here:
 			<field type="BOOL32" name="ret_val" />
 		</reply>
 	</request>
-	
+
 	<request name="GetQueryivARB" opcode="164">
 		<field type="CONTEXT_TAG" name="context_tag" />
 		<field type="CARD32" name="target" />
@@ -1473,7 +1473,7 @@ The patch that fixed this server bug in X.org is here:
 			</list>
 		</reply>
 	</request>
-	
+
 	<request name="GetQueryObjectivARB" opcode="165">
 		<field type="CONTEXT_TAG" name="context_tag" />
 		<field type="CARD32" name="id" />
@@ -1489,7 +1489,7 @@ The patch that fixed this server bug in X.org is here:
 			</list>
 		</reply>
 	</request>
-	
+
 	<request name="GetQueryObjectuivARB" opcode="166">
 		<field type="CONTEXT_TAG" name="context_tag" />
 		<field type="CARD32" name="id" />
@@ -1505,19 +1505,19 @@ The patch that fixed this server bug in X.org is here:
 			</list>
 		</reply>
 	</request>
-	
+
 	<!--
 	GL_ARB_vertex_program
 	http://oss.sgi.com/projects/ogl-sample/registry/ARB/vertex_program.txt
 	XXX: Need to write up vops
-	--> 
+	-->
 
 	<!--
 	GL_ARB_fragment_program
 	http://oss.sgi.com/projects/ogl-sample/registry/ARB/fragment_program.txt
 	XXX: Need to write up vops
 	-->
-	
+
 	<!--
 	GL_SGIS_texture_filter4
 	http://oss.sgi.com/projects/ogl-sample/registry/SGIS/texture_filter4.txt
@@ -1589,7 +1589,7 @@ The patch that fixed this server bug in X.org is here:
 	http://oss.sgi.com/projects/ogl-sample/registry/EXT/pixel_transform.txt
 	XXX: Need to write up vops
 	-->
-	
+
 	<!--
 	GL_NV_register_combiners
 	http://oss.sgi.com/projects/ogl-sample/registry/NV/register_combiners.txt
@@ -1637,5 +1637,5 @@ The patch that fixed this server bug in X.org is here:
 	http://oss.sgi.com/projects/ogl-sample/registry/OES/single_precision.txt
 	XXX: Need to write up vops
 	-->
-	
+
 </xcb>

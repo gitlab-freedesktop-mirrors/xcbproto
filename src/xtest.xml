@@ -30,7 +30,7 @@ authorization from the authors.
     major-version="2" minor-version="2">
 
     <import>xproto</import>
-    
+
     <!-- Requests -->
     <request name="GetVersion" opcode="0">
         <field type="CARD8"  name="major_version" />
@@ -54,7 +54,7 @@ authorization from the authors.
             <field type="BOOL" name="same" />
         </reply>
     </request>
-    
+
     <!-- There are several ways to use the FakeInput request:
             1. Simulate a keypress:
                 type   = XCBKeyPress or XCBKeyRelease
@@ -99,7 +99,7 @@ authorization from the authors.
         <field type="BOOL" name="impervious" />
         <pad bytes="3" />
     </request>
-    
+
     <!-- No events or errors -->
 
 </xcb>
